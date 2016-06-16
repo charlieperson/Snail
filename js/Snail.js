@@ -13,15 +13,14 @@ Snail.prototype.spiral = function(input){
   var bottom = snailRemaining[snailRemaining.length-1].reverse();
   snailRemaining.splice(snailRemaining.length-1, 1);
 
+
   for(i=0; i<bottom.length; i++) {
     solution.push(bottom[i]);
   }
-  console.log(solution);
-  console.log(snailRemaining);
+
+  for(i=0; i<snailRemaining[0].length; i++){
+    solution.push(snailRemaining[0][i]);
+  }
+
+  return solution;
 };
-
-array = [[1,2,3],
-         [4,5,6],
-         [7,8,9]];
-
-array = [[4,5]];
